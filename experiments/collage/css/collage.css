@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+:root {
+  --dark-neutral-sand: #867360;
+  --darker-neutral-sand: #342c26;
+  --lighter-neutral-sand: #D3C4AF;
+  --deep-indigo-sky: #3A3058;
+  --red-rock-color: #B04A5A;
+  --sage-green: #87907D;
+  --light-text: #FFFFF8; /* Very light ivory */
+  --dark-text: #0A0F24; /* Very very dark indigo */
+}
+
+/* Reset margins and padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-size: 1.3em;
+  font-family: "Shadows Into Light", cursive;
+  color: var(--light-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Shadows Into Light", cursive;
+}
+
+/* Style for all major sections */
+#content, .major-section {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background for section-splash */
+#section-splash {
+  background: linear-gradient(
+        to bottom, 
+        rgba(0, 0, 0, 0) 60%, /* Start transition earlier */
+        black 76.66% /* End transition 10% later */
+    ), url('../img/starfield.jpg') no-repeat center center / cover;
+  background-color: black;
+}
+
+/* Center the explainer box both vertically and horizontally */
+.major-section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.major-section .container .collage {
+  display: block; /* Maintains block-level display */
+  min-width: 100%; /* Ensures it spans the full width of its container */
+  min-height: 100%; /* Ensures it spans the full height of its container */
+  background-image: linear-gradient(var(--dark-neutral-sand), var(--darker-neutral-sand)); 
+}
+
+.explainer {
+  width: 66.66%; /* 2/3 width */
+  height: 66.66%; /* 2/3 height */
+  margin: auto; /* Center the box */
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(var(--dark-neutral-sand), var(--darker-neutral-sand)); 
+  color: var(--light-text);
+  border-radius: 0.5em;
+}
+
+button {
+  color: var(--light-text); /* Sets the text color */
+  background-color: transparent; /* Makes the button background transparent */
+  border: 2px solid var(--light-text); /* Sets the border to a 2px solid line using the light text color */
+  padding: 0.5em 1em; /* Adjust padding to your preference */
+  font-weight: bold; /* Optional: makes the font bold */
+  cursor: pointer; /* Changes the cursor to a pointer on hover for better user experience */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+  border-radius: 0.5em; /* Optional: Adds a slight curve to the button */ 
+}
+
+button:hover {
+  background-color: var(--light-text); /* Changes background to light text color on hover */
+  color: black; /* Optional: Changes text color on hover for contrast */
+}
